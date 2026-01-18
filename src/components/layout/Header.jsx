@@ -4,15 +4,15 @@ import Button from "../common/Button";
 export default function Header() {
   return (
     <header className="border-b bg-white">
-      <Container className="flex h-14 items-center justify-between">
+      <Container className="flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 font-bold">
           <div className="flex h-8 w-24 items-center justify-center rounded-md bg-green-100 text-sm font-semibold text-gray-700">
             chillgram
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
-          <nav className="flex items-center gap-6 text-sm text-gray-700">
+        <div className="flex items-center gap-3">
+          <nav className="flex items-center gap-5 text-sm text-gray-700">
             <a className="hover:text-black" href="#features">
               프로젝트 생성
             </a>

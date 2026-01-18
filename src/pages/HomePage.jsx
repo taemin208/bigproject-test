@@ -43,7 +43,7 @@ export default function HomePage() {
       <Header />
 
       <main>
-        <section className="bg-white py-20">
+        <section className="bg-white pt-16 pb-20">
           <Container className="flex flex-col items-center text-center">
             <h1 className="max-w-3xl text-3xl font-extrabold leading-tight text-gray-800 md:text-4xl">
               <span className="text-green-500">AI</span>로 완성하는
@@ -55,7 +55,7 @@ export default function HomePage() {
               <br />
               전 과정을 자동화한 AI 패키지 올인원 플랫폼
             </p>
-            <Button className="mt-8 h-11 px-8 bg-green-500 text-white hover:bg-green-600 focus:ring-green-500">
+            <Button className="mt-8 h-10 px-8 bg-green-500 text-white hover:bg-green-600 focus:ring-green-500">
               무료로 시작하기
             </Button>
           </Container>
@@ -70,11 +70,11 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
               {FEATURES.map((feature) => (
                 <Card
                   key={feature.title}
-                  className="border-green-100 bg-green-50/70 text-center"
+                  className="border-green-200/70 text-center"
                 >
                   <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-green-200 text-xs font-semibold text-green-900">
                     {feature.badge}
