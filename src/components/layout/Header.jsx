@@ -1,31 +1,34 @@
-import Container from "../common/Container";
-import Button from "../common/Button";
+﻿import Container from "../common/Container";
 
 export default function Header() {
   return (
     <header className="border-b bg-white">
       <Container className="flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2 font-bold">
-          <div className="flex h-8 w-24 items-center justify-center rounded-md bg-green-100 text-sm font-semibold text-gray-700">
-            chillgram
-          </div>
-        </div>
+        <a href="#/" className="flex items-center gap-2 font-bold text-gray-800">
+          <span className="flex h-7 w-7 items-center justify-center rounded-full border border-green-200 bg-green-50 text-xs">
+            :)
+          </span>
+          chillgram
+        </a>
 
         <div className="flex items-center gap-3">
-          <nav className="flex items-center gap-5 text-sm text-gray-700">
+          <nav className="flex items-center gap-4 text-sm text-gray-700">
             <a className="hover:text-black" href="#features">
               프로젝트 생성
             </a>
-            <a className="hover:text-black" href="#features">
+            <a
+              className="inline-flex h-8 items-center justify-center rounded-md border border-gray-200 px-3 text-xs font-semibold text-gray-700 transition hover:border-gray-300"
+              href="#/qna"
+            >
               Q&A
             </a>
           </nav>
-          <Button
-            size="sm"
-            className="bg-green-500 text-white hover:bg-green-600 focus:ring-green-500"
+          <a
+            href="#/"
+            className="inline-flex h-8 items-center justify-center rounded-md bg-green-500 px-4 text-xs font-semibold text-white transition hover:bg-green-600"
           >
             가입하기
-          </Button>
+          </a>
         </div>
       </Container>
     </header>
