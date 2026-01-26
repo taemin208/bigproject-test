@@ -5,6 +5,10 @@
   font-family: "Pretendard", "SUIT", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --color-main: #5bf22f;
+  --color-text: #111827;
+  --color-back: #f5f7fa;
+  --color-sub: #9ca3af;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
