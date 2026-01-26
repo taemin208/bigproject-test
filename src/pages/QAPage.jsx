@@ -1,56 +1,11 @@
 ﻿import { useMemo, useState } from "react";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import Container from "../components/common/Container";
-import Card from "../components/common/Card";
-import Button from "../components/common/Button";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Container from "@/components/common/Container";
+import Card from "@/components/common/Card";
+import Button from "@/components/common/Button";
+import { QUESTIONS } from "@/data/qnaData";
 
-const QUESTIONS = [
-  {
-    id: 1,
-    category: "사용 방법",
-    status: "답변 완료",
-    title: "대시보드에서 프로젝트 생성은 어떻게 하나요?",
-    excerpt:
-      "처음 사용 중인데 프로젝트 생성 버튼이 어디 있는지 찾기 어렵습니다. 위치를 알려주세요.",
-    author: "김철수",
-    date: "2024-01-24 10:30",
-    replies: 1,
-  },
-  {
-    id: 2,
-    category: "기술 지원",
-    status: "답변 완료",
-    title: "파일 업로드가 50%에서 멈춰요",
-    excerpt:
-      "이미지 업로드 시 진행률이 50%에서 멈춥니다. 해결 방법이 있을까요?",
-    author: "이영희",
-    date: "2024-01-24 14:20",
-    replies: 2,
-  },
-  {
-    id: 3,
-    category: "결제/환불",
-    status: "답변 대기",
-    title: "결제 영수증은 어디서 확인하나요?",
-    excerpt:
-      "결제 내역과 영수증을 확인할 수 있는 메뉴가 있는지 알고 싶습니다.",
-    author: "박민수",
-    date: "2024-01-25 09:15",
-    replies: 0,
-  },
-  {
-    id: 4,
-    category: "버그 리포트",
-    status: "답변 대기",
-    title: "알림 설정이 저장되지 않아요",
-    excerpt:
-      "알림 설정을 변경해도 새로고침하면 이전 값으로 돌아갑니다.",
-    author: "최지은",
-    date: "2024-01-25 11:40",
-    replies: 0,
-  },
-];
 
 const STATUS_TONE = {
   "답변 완료": "bg-green-100 text-green-700",
@@ -269,38 +224,44 @@ export default function QAPage() {
 
             <div className="mt-6 space-y-4">
               {filteredQuestions.map((question) => (
-                <Card key={question.id} className="border-gray-100">
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
-                    <span className="rounded-full border border-gray-200 px-2 py-0.5 text-gray-600">
-                      {question.category}
-                    </span>
-                    <span
-                      className={`rounded-full px-2 py-0.5 font-semibold ${
-                        STATUS_TONE[question.status]
-                      }`}
-                    >
-                      {question.status}
-                    </span>
-                  </div>
-                  <h3 className="mt-3 text-base font-semibold text-gray-900">
-                    {question.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-500">{question.excerpt}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-gray-400">
-                    <span className="flex items-center gap-1">
-                      <span className="h-4 w-4 rounded-full bg-gray-100" />
-                      {question.author}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span className="h-4 w-4 rounded-full bg-gray-100" />
-                      {question.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span className="h-4 w-4 rounded-full bg-gray-100" />
-                      답변 {question.replies}개
-                    </span>
-                  </div>
-                </Card>
+                <a
+                  key={question.id}
+                  href={`#/qna/${question.id}`}
+                  className="block"
+                >
+                  <Card className="border-gray-100 transition hover:shadow-md">
+                    <div className="flex flex-wrap items-center gap-2 text-xs">
+                      <span className="rounded-full border border-gray-200 px-2 py-0.5 text-gray-600">
+                        {question.category}
+                      </span>
+                      <span
+                        className={`rounded-full px-2 py-0.5 font-semibold ${
+                          STATUS_TONE[question.status]
+                        }`}
+                      >
+                        {question.status}
+                      </span>
+                    </div>
+                    <h3 className="mt-3 text-base font-semibold text-gray-900">
+                      {question.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-500">{question.excerpt}</p>
+                    <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-gray-400">
+                      <span className="flex items-center gap-1">
+                        <span className="h-4 w-4 rounded-full bg-gray-100" />
+                        {question.author}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <span className="h-4 w-4 rounded-full bg-gray-100" />
+                        {question.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <span className="h-4 w-4 rounded-full bg-gray-100" />
+                        답변 {question.answers.length}개
+                      </span>
+                    </div>
+                  </Card>
+                </a>
               ))}
             </div>
 
@@ -317,3 +278,4 @@ export default function QAPage() {
     </div>
   );
 }
+
