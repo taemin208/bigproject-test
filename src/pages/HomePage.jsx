@@ -6,22 +6,22 @@ import Button from "../components/common/Button";
 
 const FEATURES = [
   {
-    title: "AI 디자인 생성",
+    title: "AI 광고 생성",
     description:
-      "Stable Diffusion 기반으로 신속한 AI로 다양한 패키지 디자인을 제안합니다.",
+      "실시간 트렌드 데이터를 분석하여 최적의 광고 콘텐츠를 AI가 생성합니다.",
     icon: "🎨",
   },
   {
-    title: "소비자 분석",
+    title: "SNS 자동 운영",
     description:
-      "SNS 데이터로 소비자 트렌드와 구매 성향을 분석합니다.",
-    icon: "📊",
+      "예약 게시, 자동 발행으로 SNS 운영을 완전 자동화합니다.",
+    icon: "📱",
   },
   {
-    title: "자동 A/B 테스트",
+    title: "성과 분석",
     description:
-      "가상 A/B 테스트로 반응이 좋은 시안을 빠르게 선택합니다.",
-    icon: "✨",
+      "인사이트 분석, 트렌드 리포트로 데이터 기반 마케팅을 실현합니다.",
+    icon: "📈",
   },
 ];
 
@@ -52,14 +52,14 @@ export default function HomePage() {
         <section className="pt-20 pb-14">
           <Container className="text-center">
             <h1 className="text-3xl font-extrabold leading-tight md:text-4xl">
-              <span className="text-green-500">AI</span>로 완성하는
+              <span className="text-green-500">트렌드 탐지 기반</span> 식품 광고
               <br />
-              완벽한 패키지 디자인
+              SNS 자동 생성 운영 AI
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-gray-500">
-              소비자 데이터 기반 패키지 기획부터 디자인 생성과 광고성 제작까지
+              실시간 트렌드 분석으로 식품 광고 콘텐츠를 자동 생성하고
               <br />
-              전 과정을 자동화한 AI 패키징 올인원 플랫폼
+              SNS 게시부터 성과 분석까지 한 번에 관리하는 올인원 플랫폼
             </p>
             <Button className="mt-8 h-9 bg-green-500 px-5 text-xs font-semibold text-white hover:bg-green-600 focus:ring-green-500">
               무료로 시작하기
@@ -72,7 +72,7 @@ export default function HomePage() {
             <div className="text-center">
               <h2 className="text-2xl font-bold">핵심 기능</h2>
               <p className="mt-2 text-xs text-gray-500">
-                AI 기술로 패키지 디자인 프로세스를 혁신합니다
+                AI 기술로 식품 광고 SNS 마케팅을 완전 자동화합니다
               </p>
             </div>
 
