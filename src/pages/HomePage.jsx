@@ -1,8 +1,8 @@
-﻿import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
-import Container from "../components/common/Container";
-import Card from "../components/common/Card";
-import Button from "../components/common/Button";
+﻿import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Container from "@/components/common/Container";
+import Card from "@/components/common/Card";
+import Button from "@/components/common/Button";
 
 const FEATURES = [
   {
@@ -141,3 +141,4 @@ export default function HomePage() {
     </div>
   );
 }
+

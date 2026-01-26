@@ -1,4 +1,4 @@
-﻿import Container from "../common/Container";
+﻿import Container from "@/components/common/Container";
 
 export default function Header() {
   return (
@@ -34,3 +34,4 @@ export default function Header() {
     </header>
   );
 }
+

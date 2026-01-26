@@ -1,7 +1,7 @@
 ﻿import { useState } from "react";
-import Footer from "../components/layout/Footer";
-import Container from "../components/common/Container";
-import Button from "../components/common/Button";
+import Footer from "@/components/layout/Footer";
+import Container from "@/components/common/Container";
+import Button from "@/components/common/Button";
 
 export default function QnaWritePage() {
   const [fileName, setFileName] = useState("");
@@ -185,3 +185,4 @@ export default function QnaWritePage() {
     </div>
   );
 }
+

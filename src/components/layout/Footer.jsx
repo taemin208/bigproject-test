@@ -1,4 +1,4 @@
-﻿import Container from "../common/Container";
+﻿import Container from "@/components/common/Container";
 
 export default function Footer() {
   return (
@@ -9,3 +9,4 @@ export default function Footer() {
     </footer>
   );
 }
+
